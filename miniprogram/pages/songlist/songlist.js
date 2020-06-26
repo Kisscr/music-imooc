@@ -68,6 +68,13 @@ Page({
     })
   },
 
+  handleToPreview() {
+    const imgs = this.data.listInfo.coverImgUrl
+    wx.previewImage({
+      urls: [imgs],
+      current: imgs
+    })
+  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作

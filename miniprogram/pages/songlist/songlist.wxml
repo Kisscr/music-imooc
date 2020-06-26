@@ -3,7 +3,7 @@
 </view>
 <view class="mask"></view>
 <view class="list_info">
-	<view class="list_img">
+	<view class="list_img" bindtap="handleToPreview">
 		<image class="img" src="{{listInfo.coverImgUrl}}" mode="widthFix"></image>
     <view class="play_count">{{listInfo.playCount}}</view>
 	</view>
