@@ -1,0 +1,68 @@
+/* 评论和分享样式 */
+.control_container {
+  display: flex;
+  padding-bottom: 20rpx;
+  background-color: #fff;
+  height: 100%;
+}
+
+.control_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 28rpx;
+}
+
+.control_item .iconfont {
+  color: #888;
+  font-size: 36rpx;
+  margin-right: 10rpx;
+}
+.share_btn{
+  padding: 0;
+  height: 100%;
+  border: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+.share_btn::after{
+  display: none;
+}
+
+/* 评论弹出层样式 */
+.modal_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_content {
+  padding: 20rpx;
+  width: 80%;
+}
+
+.send_btn {
+  position: absolute;
+  left: 600rpx;
+  bottom: 20rpx;
+  padding: 10rpx;
+  width: 100rpx;
+  height: 55rpx;
+  background-color: #d43c43;
+  color: #fff;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send_hover{
+  background-color: #fff;
+  color: #d43c43;
+}

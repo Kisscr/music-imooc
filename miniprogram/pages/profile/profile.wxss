@@ -1,0 +1,76 @@
+page{
+  background-color: #f1f1f1;
+}
+.profile_header{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg{
+  position: absolute;
+  width: 100%;
+  height: 42vh;
+  filter: blur(30px);
+  z-index: -2;
+  left: 0;
+  top: 0;
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 45vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+.avatar_url{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6rpx solid #fff;
+}
+.nickName{
+  color: #f2f2f2;
+  margin-top: 20rpx;
+  font-weight: 600;
+  font-size: 32rpx;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav{
+  width: 94%;
+  margin: 40rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.nav_item .content{
+  display: flex;
+  padding: 30rpx 60rpx 20rpx 40rpx;
+  border-bottom: 1px solid #eee;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.text{
+  flex: 1;
+  font-size: 30rpx;
+  color: #666;
+  margin-left: 32rpx;
+}
+.icon-zuijinbofang,
+.icon-iconshuoshuo,
+.icon-erweima{
+  color: #d43c43;
+  font-size: 50rpx;
+  font-weight: 500;
+}
+.icon-next-copy{
+  color: #888;
+  font-weight: 600;
+}

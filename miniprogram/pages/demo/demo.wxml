@@ -1,0 +1,8 @@
+<!--pages/demo/demo.wxml-->
+<text>openid: {{openid}}</text>
+<button bindtap="handleGetPhoneContact">添加手机通讯录联系人</button>
+<button bindtap="handleGetBatteryInfo">获取手机电量</button>
+<view>当前电量{{level>0 ? level + '%' : ''}}</view>
+<view wx:if="{{isCharging}}">正在充电中</view>
+<view wx:if="{{!isCharging}}">未连接充电器</view>
+<button bindtap="handleScanCode">扫一扫</button>

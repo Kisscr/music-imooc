@@ -1,0 +1,38 @@
+<view wx:if="{{isShow}}">
+	<scroll-view class="container" scroll-y>
+		<!-- 1. 博客内容 -->
+		<view>
+			<c-blog-card blog="{{blog}}" />
+		</view>
+
+		<!-- 2. 评论标题 -->
+		<view class="tab">
+			<view class="tab-item">评论列表</view>
+		</view>
+
+		<!-- 3. 博客评论列表 -->
+		<view wx:if="{{commentList.length > 0}}" class="comment_list">
+			<block wx:for="{{commentList}}" wx:key="_id">
+				<view class="comment_item">
+					<view class="userinfo">
+						<image class="avatar" src="{{item.avatar}}"></image>
+						<text class="nickName">{{item.nickName}}</text>
+					</view>
+					<view class="comment_content">
+						{{item.content}}
+					</view>
+					<view class="comment_time">
+						{{item.createTime}}
+					</view>
+				</view>
+			</block>
+		</view>
+
+		<view wx:else class="no_comment">暂无评论,快来抢沙发~</view>
+	</scroll-view>
+
+	<!-- 4. 底部功能区 -->
+	<view class="footer_control">
+		<c-blog-control blogId="{{blog._id}}" bind:refreshCommentList="handleRefreshCommentList" />
+	</view>
+</view>

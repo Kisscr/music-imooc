@@ -1,0 +1,22 @@
+<!-- 1. 头部搜索部分 -->
+<view class="header">
+	<view class="publish_container" bindtap="handleModalShow">
+		<i class="iconfont icon-fabu"></i>
+	</view>
+	<view class="search_container">
+		<c-search placeholder="{{placeholder}}" iconfont="iconfont" icon-sousuo="icon-sousuo" bind:search="handleSearch" />
+	</view>
+</view>
+
+<!-- 博客卡片列表 -->
+<view class="blog_list">
+	<block wx:for="{{blogList}}" wx:key="_id">
+		<view class="blog_panel">
+			<c-blog-card blog="{{item}}" bindtap="handleToComment" data-id="{{item._id}}" />
+			<c-blog-control blogId="{{item._id}}" blog="{{item}}"/>
+		</view>
+	</block>
+</view>
+
+<!-- 2. 底部弹出层 -->
+<c-login showModal="{{showModal}}" bind:loginSuccess="handleLoginSuccess" bind:loginFail="handleLoginFail" />

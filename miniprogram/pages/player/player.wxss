@@ -1,0 +1,136 @@
+.playing_bg{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: -1;
+}
+.mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  left: 0;
+  top: 0;
+  z-index: -2;
+}
+
+/* 唱片封面样式 */
+.player_info{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+.player_disc{
+  width: 592rpx;
+  height: 592rpx;
+  background: url(https://s3.music.126.net/mobile-new/img/disc.png?d3bdd1080a72129346aa0b4b4964b75f=) no-repeat center/contain;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 140rpx);
+}
+/* 伪元素添加指针 */
+.player_disc::after{
+  content: '';
+  width: 192rpx;
+  height: 274rpx;
+  position: absolute;
+  top: -150rpx;
+  left: 266rpx;
+  background: url(https://s3.music.126.net/m/s/img/needle.png?702cf6d95f29e2e594f53a3caab50e12) no-repeat center/contain;
+  transform: rotate(-20deg);
+  transform-origin: 24rpx 10rpx;
+  transition: transform 0.5s ease;
+}
+/* 指针旋转动画 */
+.play.player_disc::after{
+  transform: rotate(0deg);
+}
+
+.player_disc .player_img{
+  width: 368rpx;
+  height: 368rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -184rpx;
+  margin-top: -184rpx;
+}
+
+/* 唱片封面旋转样式 */
+.rotate {
+  animation: rotation 12s linear infinite;
+  -moz-animation: rotation 12s linear infinite;
+  -webkit-animation: rotation 12s linear infinite;
+  -o-animation: rotation 12s linear infinite;
+}
+@keyframes rotation{
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+/* 暂停后唱片的样式 */
+.rotate-paused{
+  animation-play-state: paused;
+}
+
+/* 其他按钮样式 */
+.other_control{
+  position: absolute;
+  width: 100%;
+  bottom: 17%;
+  left: 0;
+}
+.other_control .control_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.other_control .control_container .iconfont{
+  color: #fefefec2;
+  font-size: 45rpx;
+}
+
+/* 进度条样式 */
+.progress{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 12%;
+}
+
+/* 播放按钮样式 */
+.player_control{
+  position: absolute;
+  width: 100%;
+  bottom: 3%;
+  left: 0;
+}
+.player_control .control_container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.player_control .control_container .iconfont{
+  color: #fefefeda;
+  font-size: 50rpx;
+}
+.player_control .control_container .icon-bofang,
+.player_control .control_container .icon-zanting1{
+  font-size: 80rpx;
+}
+
+.player_control .control_container .icon-ziyuan{
+  font-size: 36rpx;
+}

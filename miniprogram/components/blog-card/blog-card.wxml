@@ -1,0 +1,16 @@
+<view class="blog">
+	<view class="blog_title">
+		<image class="avatar" src="{{blog.avatar}}" lazy-load></image>
+		<view class="blog_box">
+			<view class="nickname">{{blog.nickname}}</view>
+			<view class="blog_time">{{_createTime}}</view>
+		</view>
+	</view>
+	<view class="blog_content">{{blog.content}}</view>
+	<view class="blog_img">
+		<block wx:for="{{blog.imgs}}" wx:key="index">
+			<image class="img" src="{{item}}" data-index="{{index}}" mode="aspectFill" catchtap="handlePreview" lazy-load></image>
+		</block>
+	</view>
+  
+</view>

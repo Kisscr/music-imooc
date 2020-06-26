@@ -1,0 +1,15 @@
+<!-- 1. 轮播图部分 -->
+<swiper class="swiper_container" indicator-dots autoplay indicator-active-color="#d43c43" indicator-color="#ccc"  circular>
+	<block wx:for="{{swipers}}" wx:key="url">
+		<swiper-item class="swiper_item">
+			<image src="{{item.url}}" mode="widthFix" class="swiper_img" lazy-load></image>
+		</swiper-item>
+	</block>
+</swiper>
+
+<!-- 2. 歌单部分 -->
+<view class="playlist_container">
+  <block wx:for="{{playlist}}" wx:key="_id">
+    <song-sheet class="playlist_item" playlist="{{item}}"></song-sheet>
+  </block>
+</view>

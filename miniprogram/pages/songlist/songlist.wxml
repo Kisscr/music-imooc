@@ -1,0 +1,21 @@
+<!-- 1. 顶部歌单信息 -->
+<view class="container" style="background: url({{listInfo.coverImgUrl}}) no-repeat top/cover">
+</view>
+<view class="mask"></view>
+<view class="list_info">
+	<view class="list_img">
+		<image class="img" src="{{listInfo.coverImgUrl}}" mode="widthFix"></image>
+    <view class="play_count">{{listInfo.playCount}}</view>
+	</view>
+	<view class="list_detail">
+    <view class="list_name">{{listInfo.listName}}</view>
+    <view class="author_info">
+      <image class="avatar" src="{{listInfo.avatarUrl}}"></image>
+      <view class="nickname">{{listInfo.nickname}}</view>
+    </view>
+    <view class="desc">简介：{{listInfo.description}}</view>
+  </view>
+</view>
+
+<!-- 2. 详细歌曲信息 -->
+<musiclist musiclist="{{musiclist}}" />

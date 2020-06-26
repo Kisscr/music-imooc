@@ -1,0 +1,48 @@
+page{
+  background-color: #f1f1f1;
+}
+.blog{
+  padding: 20rpx;
+  background-color: #fff;
+}
+
+.blog_title{
+  display: flex;
+  align-items: center;
+}
+.blog_content{
+  font-size: 32rpx;
+}
+
+.avatar{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.nickname{
+  font-size: 26rpx;
+}
+.blog_box .blog_time{
+  font-size: 24rpx;
+  color: #666;
+}
+
+.blog_content{
+  padding: 20rpx;
+}
+
+.blog_img{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img{
+  width: 230rpx;
+  height: 230rpx;
+  border-right: 10rpx solid #fff;
+  border-bottom: 10rpx solid #fff;
+}
+.img:nth-child(3n){
+  border-right: 0;
+}

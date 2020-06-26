@@ -1,0 +1,25 @@
+<view class="container">
+	<!-- 1. 文本域 -->
+	<textarea class="content" placeholder="分享新鲜事..." maxlength="{{max_num}}" bindinput="handleInput" auto-focus bindfocus="handleFocus" bindblur="handleBlur"></textarea>
+
+	<!-- 2. 上传图片区域 -->
+	<view class="image_container">
+		<!-- 选择图片区域 -->
+		<block wx:for="{{images}}" wx:key="item">
+			<view class="image_wrap" bindtap="handlePreview" data-url="{{item}}">
+				<image class="image" src="{{item}}" mode="aspectFill"></image>
+				<i class="iconfont icon-chuyidong" catchtap="handleDeleteImage" data-index="{{index}}"></i>
+			</view>
+		</block>
+		<!-- 添加图片 -->
+		<view class="image_wrap select_image" hidden="{{images.length >= 9}}" bindtap="handleChooseImage">
+			<i class="iconfont icon-jiahao"></i>
+		</view>
+	</view>
+
+	<!-- 3. 底部发布区域 -->
+	<view class="footer" style="bottom: {{footerBottom}}px">
+		<text class="num">{{wordNums}}</text>
+		<view class="publish_btn" bindtap="handleUpload">发布</view>
+	</view>
+</view>

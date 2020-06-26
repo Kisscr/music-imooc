@@ -1,0 +1,36 @@
+<!-- 1. 背景图片 -->
+<view class="playing_bg" style="background: url({{picUrl}}) no-repeat center/cover"></view>
+<view class="mask"></view>
+<!-- 2. 唱片封面 -->
+<view class="player_info">
+	<view class="player_disc {{isPlaying ? 'play' : ''}}" bindtap="handleChangeLyricShow" hidden="{{isLyricShow}}">
+		<view class="player_img rotate {{isPlaying ? '' : 'rotate-paused'}}" style="background: url({{picUrl}}) no-repeat center/cover"></view>
+	</view>
+	<!-- 3. 歌词展示 -->
+	<c-lyric class="lyric" lyric="{{lyric}}" isHidden="{{!isLyricShow}}" bindtap="handleChangeLyricShow" />
+</view>
+
+<!-- 4. 收藏、下载等功能 -->
+<view class="other_control">
+	<view class="control_container">
+		<view class="iconfont icon-xin"></view>
+		<view class="iconfont icon-xiazai"></view>
+		<view class="iconfont icon-maikefeng"></view>
+		<view class="iconfont icon-pinglun"></view>
+		<view class="iconfont icon-gengduoxiao"></view>
+	</view>
+</view>
+
+<!-- 5. 进度条组件 -->
+<c-progress class="progress" bind:musicEnd="handleNext" bind:timeUpdate="handleTimeUpdate" bind:musicPlay="handleMusicPlay" bind:musicPause="handleMusicPause" isSame="{{isSame}}"/>
+
+<!-- 6. 播放、暂停等按钮 -->
+<view class="player_control">
+	<view class="control_container">
+		<view class="iconfont icon-ziyuan"></view>
+		<view class="iconfont icon-shangyishoushangyige" bindtap="handlePrev"></view>
+		<view class="iconfont {{isPlaying ? 'icon-zanting1' : 'icon-bofang'}} " bindtap="togglePlaying"></view>
+		<view class="iconfont icon-xiayigexiayishou" bindtap="handleNext"></view>
+		<view class="iconfont icon-list"></view>
+	</view>
+</view>

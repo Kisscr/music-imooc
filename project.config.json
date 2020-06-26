@@ -1,0 +1,138 @@
+{
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": false,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"appid": "wxcbddccfbacb51338",
+	"projectname": "music-imooc",
+	"libVersion": "2.11.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "demo",
+					"pathName": "pages/demo/demo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "歌单",
+					"pathName": "pages/songlist/songlist",
+					"query": "playlistId=4920881606",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "播放歌曲",
+					"pathName": "pages/player/player",
+					"query": "musicid=1336856777",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "歌曲播放",
+					"pathName": "pages/player/player",
+					"query": "musicid=1336856777&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/playlist/playlist",
+					"query": "musicid=1336856777&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/blog/blog",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "编辑",
+					"pathName": "pages/blog-edit/blog-edit",
+					"query": "nickname=Crrrr.&avatar=https%3A%2F%2Fwx.qlogo.cn%2Fmmopen%2Fvi_32%2FQ0j4TwGTfTJ2N1riaUMHtkiaA8ZmIfOYFrkcY5Aic2icuFCS53oibmfNg4eMdIHeFg41bf2lZAjexiabTf58sA61nvrg%2F132",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "评论",
+					"pathName": "pages/blog-comment/blog-comment",
+					"query": "blogId=5535aeeb5ee9d85c0002791f346110fa",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "播放历史",
+					"pathName": "pages/profile-playhistory/profile-playhistory",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "模拟更新",
+					"pathName": "pages/playlist/playlist",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

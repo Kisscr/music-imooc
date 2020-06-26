@@ -1,0 +1,22 @@
+<view class="control_container">
+	<view class="comment control_item" bindtap="handleComment">
+		<i class="iconfont icon-pinglun1"></i>
+		<text class="control_text">评论</text>
+	</view>
+	<view class="share control_item">
+		<button class="share_btn" open-type="share" data-blog="{{blog}}">
+			<i class="iconfont icon-fenxiang1"></i>
+			<text class="control_text">分享</text>
+		</button>
+	</view>
+
+</view>
+
+<c-login showModal="{{showModal}}" bind:loginSuccess="handleLoginSuccess" bind:loginFail="handleLoginFail" />
+
+<c-bottom-modal showModal="{{showComment}}" bind:clearComment="handleClearComment">
+	<form slot="modal-content" class="modal_content" bindsubmit="handleSend" report-submit="true">
+		<textarea name="content" class="comment_content" placeholder="写评论..." value="{{content}}" fixed="true"></textarea>
+		<button class="send_btn" form-type="submit" hover-class="send_hover">发送</button>
+	</form>
+</c-bottom-modal>

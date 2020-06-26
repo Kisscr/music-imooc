@@ -1,0 +1,7 @@
+<view class="container" bindtap="goToMusicList">
+	<view class="playlist_img">
+		<image class="img" src="{{playlist.picUrl}}" mode="aspectFill"></image>
+	</view>
+	<view class="playCount">{{count}}</view>
+	<view class="name">{{playlist.name}}</view>
+</view>

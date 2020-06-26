@@ -1,0 +1,8 @@
+<view class="blog_list">
+	<block wx:for="{{blogList}}" wx:key="_id">
+		<view class="blog_panel">
+			<c-blog-card blog="{{item}}" bindtap="handleToComment" data-id="{{item._id}}" />
+			<c-blog-control blogId="{{item._id}}" blog="{{item}}"/>
+		</view>
+	</block>
+</view>

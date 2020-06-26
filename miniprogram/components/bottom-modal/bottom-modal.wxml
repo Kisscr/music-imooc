@@ -1,0 +1,6 @@
+<view class="container" hidden="{{!showModal}}">
+  <view class="panel">
+    <i class="iconfont icon-chuyidong" bindtap="handleModalClose"></i>
+    <slot name="modal-content"></slot>
+  </view>
+</view>
